@@ -47,6 +47,7 @@
   left: 64px;
   bottom: 30px;
   z-index: 2;
+  margin: 0;
 }
 
 .header__link {
@@ -61,6 +62,8 @@
   width: 765px;
   height: 608px;
   z-index: 1;
+  object-fit: contain;
+  object-position: right bottom;
 }
 
 .header__square-pic {
@@ -111,6 +114,14 @@
   padding: 0;
 }
 
+.two-columns__paragraph {
+  margin-top: 0;
+}
+
+.two-columns__paragraph:last-child {
+  margin-bottom: 0px;
+}
+
 .two-columns__paragraph:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -154,6 +165,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .table_theme_dark {
@@ -191,7 +203,7 @@
 }
 
 .feynman {
-  height: 890px;
+  min-height: 890px;
   background-image: url(../images/feynman.png);
   background-size: 867px 637px;
   background-position: left bottom;
@@ -199,6 +211,7 @@
   background-color: #f2f2f2;
   position: relative;
 }
+
 .feynman__title {
   text-align: center;
   width: 648px;
@@ -220,11 +233,12 @@
 
 .feynman__link {
   position: absolute;
-  right: 40px;
+  right: 48px;
   top: 50%;
   font-weight: normal;
   line-height: 51px;
   font-size: 36px;
+  text-decoration: none;
 }
 
 .kaufman {
@@ -239,8 +253,10 @@
   position: absolute;
   right: -210px;
   top: 0px;
+  background-image: url(../images/kaufman-triangle.svg);
   width: 877px;
   height: 877px;
+  background-size: contain;
   z-index: -1;
 }
 
@@ -249,8 +265,8 @@
   color: #fff;
   min-height: 350px;
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer__columns {
@@ -258,7 +274,8 @@
   justify-content: space-between;
   list-style: none;
   padding: 0;
-  margin: 0px auto 0px;
+  margin-top: 60px;
+  margin-bottom: 40px;
   width: 90%;
 }
 
@@ -281,16 +298,19 @@
   list-style: none;
 }
 
-.footer__column_heading {
+.footer__column-heading {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font-weight: 600;
   line-height: 30px;
   font-size: 18px;
 }
 
-.footer__column_links {
+.footer__column-links {
+  display: flex;
+  flex-direction: column;
   list-style: none;
+  margin-top: 20px;
   margin-bottom: 16px;
   padding-left: 0;
   font-weight: normal;
@@ -298,8 +318,9 @@
   font-size: 18px;
 }
 
-.footer__column_link {
+.footer__column-link {
   text-decoration: none;
+  color: #fff;
 }
 
 .footer__socil-icon {
@@ -308,4 +329,3 @@
   margin-right: 10px;
   padding-top: 4px;
 }
-
